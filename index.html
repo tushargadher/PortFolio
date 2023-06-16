@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/src/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tushar Gadher - Developer</title>
+  </head>
+  <body>
+    <div class="preloader">
+      <span class="innerBox">
+        <span>Preparing content for Display</span>
+        <section class="dots-container">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </section>
+      </span>
+    </div>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <!-- plugin for animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="text/jsx"></script>
+    <script>
+      // set the during of animation plugin
+      AOS.init({
+        offset: 170,
+        duration: 1500,
+      });
+
+      window.onload = () => {
+        document.querySelector(".preloader").style.display = "none";
+      };
+    </script>
+    <script src="https://unpkg.com/kursor"></script>
+    <script>
+      new kursor({
+        removeDefaultCursor: true,
+        color: "#0065FF",
+        type: 1,
+      });
+    </script>
+  </body>
+</html>
