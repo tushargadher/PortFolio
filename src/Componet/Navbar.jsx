@@ -59,7 +59,7 @@ function Navbar(props) {
               Contact
             </li>
             <li data-aos="fade-down">
-              <a href="https://drive.google.com/file/d/1S4pLBAQJ70JI4sChTNBpfIpYjoGEcgEr/view?usp=sharing">
+              <a href="https://drive.google.com/file/d/1I1XMlDgyqOz-LX4dheEWmEh1Ez7AKcKJ/view">
                 Resume
               </a>
             </li>
