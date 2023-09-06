@@ -387,8 +387,9 @@ html {
 }
 
 .devimg {
-  /* border: 1px solid white; */
+  border: 1px solid white;
   width: 40%;
+  height: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -397,8 +398,8 @@ html {
 
 .devimg img {
   border-radius: 100%;
-  width: 80%;
-  height: 100%;
+  width: 70%;
+  /* height: 80%; */
   filter: drop-shadow(0 0 1rem black);
   /* border: 2px solid white; */
 }
