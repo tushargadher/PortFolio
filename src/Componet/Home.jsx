@@ -1,5 +1,5 @@
 import React from "react";
-import svg from "../Media/Class.jpg";
+import svg from "../Media/homeprofile2.jpg";
 const Home = () => {
   const scrollToSection = () => {
     window.scrollTo({
