@@ -15,7 +15,7 @@ const App = () => {
         <li></li>
         <li></li>
       </ul>
-      <Navbar myname="Tushar Gadher" />
+      <Navbar myname="PORTFOLIO" />
     </>
   );
 };
