@@ -37,7 +37,7 @@ html {
 }
 
 :root {
-  --blue: #1D202A;
+  --blue: #1d202a;
 }
 
 .hide {
@@ -1171,7 +1171,8 @@ h4 {
 
   .side-head {
     width: 100%;
-    align-items: center;
+    height: 50%;
+    padding: 4% 4% 0 4%;
   }
 
   .moreproject {
@@ -1179,10 +1180,11 @@ h4 {
     font-size: 2.5rem;
     width: 40%;
   }
-
+  #sendbtn {
+    font-size: 2rem;
+  }
   .left-head {
     width: 100%;
-    padding: 0 3rem;
   }
 
   .contect p {
