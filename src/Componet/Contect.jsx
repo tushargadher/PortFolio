@@ -1,67 +1,97 @@
-import React from "react";
-import video from '../Media/video.mp4';
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import BGImg from "../Media/BGcontact.jpg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Contect() {
+  const [emailData, setEmailData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    setEmailData({ ...emailData, [e.target.name]: e.target.value });
+  };
 
-    return (
-        <>
-            <div className="head" >Contact As</div>
-            <div className="contectform" data-aos="fade-up">
-                <video autoPlay muted loop id="video">
-                    <source src={video} type="video/mp4" />
-                </video>
-                <div className="side-head">
-                    <p className="side-p">GET IN TOUCH</p>
-                    <p className="side-p" id="question">Have a project ? We would love to help.</p>
-                    <p className="side-p" ><a href="mailto:tushargadher123@gmail.com" id="mail">tushargadher123@gmail.com</a></p>
-                </div>
+  //email send function
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-                <div className="left-head">
-                    <div className="contect">
-                        <h1>Contact Me</h1>
-                        <p>
-                            You can contact me at the places mentioned below. I will try to get back to you as fast as I can.
-                        </p>
-                        <div className="wrapContect">
-                            <div className="contect-item">
-                                <a href="https://www.linkedin.com/in/tushar-gadher-211bb2175/" >
-                                    <i className='bx bxl-linkedin-square' style={{ color: "#0E76A8" }}></i>
-                                </a>
-                            </div>
-                            <div className="contect-item">
-                                <a href="https://wa.me/+919512887819" >
-                                    <i className='bx bxl-whatsapp-square ' style={{ color: "#1AD03F" }} ></i>
-                                </a>
-                            </div>
-                            <div className="contect-item">
-                                <a href="https://www.facebook.com/tushar.gadher.568/" >
-                                    <i className='bx bxl-facebook-circle ' style={{ color: "#1771E6" }}></i>
-                                </a>
-                            </div>
+    const service_id = "service_u0a8q6k";
+    const temple_id = "template_k9hi5tm";
+    const public_key = "c_ew3wsouD8kCq95n";
+    const templateParams = {
+      from_name: emailData.name,
+      from_email: emailData.email,
+      to_name: "Tushar Gadher",
+      message: emailData.message,
+    };
 
-                            <div className="contect-item instagram">
-                                <a href="https://www.instagram.com/tushargadher25/">
-                                    <i className='bx bxl-instagram-alt ' style={{ color: "#E4405F" }}></i>
-                                </a>
+    emailjs
+      .send(service_id, temple_id, templateParams, public_key)
+      .then((data) => {
+        toast.success("Thank you, Your Message Successfully Sent!");
+        // console.log(`Email send successful`, data);
+        setEmailData({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        toast.error("Oh snap! Can't Send Message");
+        // console.log("Error while sending Email", error);
+      });
+  };
+  return (
+    <>
+      <ToastContainer position="top-center" />
+      <div className="head">Contact As</div>
+      <div className="contectform" data-aos="fade-up">
+        <img src={BGImg} alt="contactus" id="contactBG" />
+        <div className="side-head">
+          <p className="side-p">GET IN TOUCH</p>
+          <p className="side-p" id="question">
+            Have a project ? We would love to help.
+          </p>
+          <p className="side-p">
+            <a href="mailto:tushargadher123@gmail.com" id="mail">
+              tushargadher123@gmail.com
+            </a>
+          </p>
+        </div>
 
-                            </div>
-                            <div className="contect-item">
-                                <a href="https://t.me/tushargadher"  >
-                                    <i className='bx bxl-telegram  ' style={{ color: "#269FDE" }} ></i>
-                                </a>
-                            </div>
-                      
-                            <div className="contect-item">
-                                <a href="https://twitter.com/Tushar71886645">
-                                    <i className='bx bxl-twitter  ' style={{ color: "#1C93E4" }} ></i>
+        <div className="left-head">
+          <form id="contactForm" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Enter Name"
+              name="name"
+              onChange={(e) => handleChange(e)}
+              value={emailData.name}
+              required
+            ></input>
 
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <input
+              type="text"
+              placeholder="Enter Email"
+              name="email"
+              onChange={(e) => handleChange(e)}
+              value={emailData.email}
+              required
+            ></input>
 
-        </>
-    );
+            <textarea
+              placeholder="Message"
+              rows="8"
+              id="textarea"
+              name="message"
+              onChange={(e) => handleChange(e)}
+              value={emailData.message}
+              required
+            ></textarea>
+            <input type="submit" value="SEND" id="sendbtn" />
+          </form>
+        </div>
+      </div>
+    </>
+  );
 }
 export default Contect;

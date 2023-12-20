@@ -9,11 +9,7 @@ const App = () => {
         <li></li>
         <li></li>
         <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+      
       </ul>
       <Navbar myname="PORTFOLIO" />
     </>

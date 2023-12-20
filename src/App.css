@@ -17,7 +17,6 @@
 }
 
 html {
-  background-color: #242424;
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -38,11 +37,7 @@ html {
 }
 
 :root {
-  --blue: rgb(16, 16, 16);
-}
-
-.BgBlack {
-  background-color: #242424;
+  --blue: #1D202A;
 }
 
 .hide {
@@ -107,7 +102,8 @@ html {
   left: 0;
   margin: 0;
   padding: 0;
-  background: #242424;
+  /* background: #242424; */
+  background: #030712;
   overflow: hidden;
   /* z-index: -10; */
 }
@@ -311,6 +307,7 @@ html {
   justify-content: center;
   transition: transform 0.4s ease-in;
   color: white;
+  background-color: pink;
 }
 
 .Nav ul {
@@ -326,6 +323,7 @@ html {
 
 #myname {
   font-size: 3rem;
+  letter-spacing: 1px;
 }
 
 .navigation {
@@ -661,6 +659,7 @@ h4 {
   justify-content: space-around;
   padding: 4%;
   box-sizing: border-box;
+  backdrop-filter: blur(2px);
 }
 
 .side-p {
@@ -690,7 +689,7 @@ h4 {
   z-index: 2;
 }
 
-#video {
+#contactBG {
   position: absolute;
   /* border: 2px solid white; */
   height: 100%;
@@ -718,7 +717,44 @@ h4 {
   font-size: 2.5rem;
   font-family: myFirstFontLight;
 }
-
+#contactForm {
+  height: 100%;
+  width: 100%;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem 0 2rem;
+}
+#contactForm input {
+  margin: 1.1rem 0;
+  height: 10%;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 1rem;
+}
+#contactForm input:focus {
+  outline: none;
+}
+#contactForm #textarea {
+  margin: 1.1rem 0;
+  resize: none;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 1rem;
+}
+#contactForm #textarea:focus {
+  outline: none;
+}
+#sendbtn {
+  margin: 1.1rem 0;
+  height: 8%;
+  width: 25%;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.5rem;
+  background-color: #86a6d6;
+}
 .wrapContect {
   /* border: 1px solid wheat; */
   display: flex;

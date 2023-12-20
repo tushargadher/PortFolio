@@ -40,7 +40,7 @@ function Navbar(props) {
   };
   return (
     <>
-      <div className="Nav BgBlack">
+      <div className="Nav">
         <ul>
           <span id="myname" data-aos="fade-down">
             {props.myname}
@@ -74,16 +74,16 @@ function Navbar(props) {
         ""
       )}
 
-      <section ref={home} className="section BgBlack">
+      <section ref={home} className="section ">
         <Home />
       </section>
-      <section ref={about} className="section BgBlack">
+      <section ref={about} className="section ">
         <About />
       </section>
-      <section ref={portfolio} className="section BgBlack">
+      <section ref={portfolio} className="section">
         <Portfolio />
       </section>
-      <section ref={contact} className="section BgBlack" id="contect">
+      <section ref={contact} className="section" id="contect">
         <Contect />
       </section>
       <section className="credit">

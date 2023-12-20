@@ -27,7 +27,7 @@ function About() {
     <>
       <div className="intro">
         <div className="head">About me</div>
-        <div className="aboutme" data-aos="fade-right">
+        <div className="aboutme" data-aos="fade-up">
           <h4>ABOUT</h4>
           <h1 className="introHead">KNOW MORE ABOUT ME</h1>
           <div className="mydetail">
@@ -35,19 +35,13 @@ function About() {
             <div className="detail">
               <h1 style={{ color: "#0065FF" }}>Full Stack Web Developer</h1>
               <p id="p">
-                I'm a Web Developer based in Surat. I went to Gandhi college in
-                Surat.currently i'm pursuing bachelors of Information Technology
-                from Goverment Engineering Collage, Gandhinager.I enjoy building
-                Web apps, platforms, APIs and everything in between.When
-                confronted with a challenge, may it be technical or not, I never
-                give up until I found the solution. This might be what describes
-                me best in my daily work.
+                Hello! I'm Tushar Gadher, and I love building cool stuff on the internet. I'm a Full Stack MERN Developer, which means I work with databases, make websites look nice, and ensure everything runs smoothly behind the scenes. I have a degree in information technology, but what I love most is turning ideas into real, functional websites. From how a website looks to how it works, I enjoy every part of the process. Let's team up and create websites that not only work well but also look awesome! Super excited to take on new coding adventures and bring ideas to life!
               </p>
             </div>
           </div>
         </div>
 
-        <div className="skillcontainer" data-aos="fade-left">
+        <div className="skillcontainer" data-aos="fade-up">
           <h1 className="HeadSkill">SKILLS & TOOLS</h1>
           <div className="skill" data-aos="zoom-in-up" data-title="HTML">
             <img src={html} alt="html" />
