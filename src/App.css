@@ -37,7 +37,7 @@ html {
 }
 
 :root {
-  --blue: #1d202a;
+  --blue: #272a37;
 }
 
 .hide {
@@ -948,11 +948,9 @@ h4 {
   }
 
   .project {
-    background-color: rgb(16, 16, 16);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
     border-radius: 1rem;
     height: 70%;
     width: 80%;
