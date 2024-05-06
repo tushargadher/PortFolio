@@ -1,19 +1,13 @@
 import React from "react";
 import profile from "../Media/Profile.jpeg";
-
 import html from "../SkillsImg/html.png";
 import css from "../SkillsImg/css.png";
 import js from "../SkillsImg/javascript.png";
-import php from "../SkillsImg/php.png";
-import python from "../SkillsImg/python.png";
 import bootstrap from "../SkillsImg/bootstrap.png";
-import ccc from "../SkillsImg/c++.png";
-import java from "../SkillsImg/java.png";
 import react from "../SkillsImg/react.png";
 import node from "../SkillsImg/nodejs.png";
 import mongo from "../SkillsImg/mongo.png";
 import taliwind from "../SkillsImg/taliwindcss.png";
-import c from "../SkillsImg/c.png";
 import mysql from "../SkillsImg/mysql.png";
 import git from "../SkillsImg/git.png";
 import jqurey from "../SkillsImg/jqurey.png";
@@ -21,6 +15,8 @@ import npm from "../SkillsImg/npm.png";
 import netlify from "../SkillsImg/netlify.png";
 import postman from "../SkillsImg/postman.png";
 import matrialui from "../SkillsImg/matrialUi.png";
+import vue from "../SkillsImg/vue.png";
+import nuxt from "../SkillsImg/nuxt.png";
 
 function About() {
   return (
@@ -35,7 +31,16 @@ function About() {
             <div className="detail">
               <h1 style={{ color: "#0065FF" }}>Full Stack Web Developer</h1>
               <p id="p">
-                Hello! I'm Tushar Gadher, and I love building cool stuff on the internet. I'm a Full Stack MERN Developer, which means I work with databases, make websites look nice, and ensure everything runs smoothly behind the scenes. I have a degree in information technology, but what I love most is turning ideas into real, functional websites. From how a website looks to how it works, I enjoy every part of the process. Let's team up and create websites that not only work well but also look awesome! Super excited to take on new coding adventures and bring ideas to life!
+                Hello! I'm Tushar Gadher, enthusiastic about building innovative
+                projects on the web. I specialize in HTML, CSS, JavaScript,
+                React.js, Vue.js, Nuxt.js, MySQL, Node.js, and MongoDB.
+                Currently seeking new job opportunities to kickstart my career
+                in IT. With a degree in information technology, I thrive on
+                turning concepts into functional websites. I handle everything
+                from front-end design to back-end functionality with enthusiasm.
+                Let's collaborate to create sleek and efficient websites that
+                stand out. I'm excited for new coding challenges and ready to
+                bring ideas to life!
               </p>
             </div>
           </div>
@@ -52,24 +57,15 @@ function About() {
           <div className="skill" data-aos="zoom-in-up" data-title="JavaScript">
             <img src={js} alt="javascript" />
           </div>
-          <div className="skill" data-aos="zoom-in-up" data-title="Python">
-            <img src={python} alt="python" />
-          </div>
-          <div className="skill" data-aos="zoom-in-up" data-title="PHP">
-            <img src={php} alt="php" />
-          </div>
-          <div className="skill" data-aos="zoom-in-up" data-title="C++">
-            <img src={ccc} alt="c++" />
-          </div>
-          <div className="skill" data-aos="zoom-in-up" data-title="C language">
-            <img src={c} alt="c" />
-          </div>
 
-          <div className="skill" data-aos="zoom-in-up" data-title="Java">
-            <img src={java} alt="java" />
-          </div>
           <div className="skill" data-aos="zoom-in-up" data-title="ReactJs">
             <img src={react} alt="react" />
+          </div>
+          <div className="skill" data-aos="zoom-in-up" data-title="VueJS">
+            <img src={vue} alt="vuejs" />
+          </div>
+          <div className="skill" data-aos="zoom-in-up" data-title="NuxtJs">
+            <img src={nuxt} alt="nuxtjs" />
           </div>
           <div className="skill" data-aos="zoom-in-up" data-title="NodeJs">
             <img src={node} alt="node" />
