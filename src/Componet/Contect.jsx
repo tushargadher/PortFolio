@@ -45,7 +45,7 @@ function Contect() {
       <ToastContainer position="top-center" />
       <div className="head">Contact As</div>
       <div className="contectform" data-aos="fade-up">
-        <img src={BGImg} alt="contactus" id="contactBG" />
+        <img src={BGImg} alt="contactus" id="contactBG" loading="lazy"/>
         <div className="side-head">
           <p className="side-p">GET IN TOUCH</p>
           <p className="side-p" id="question">
@@ -70,7 +70,7 @@ function Contect() {
             ></input>
 
             <input
-              type="text"
+              type="email"
               placeholder="Enter Email"
               name="email"
               onChange={(e) => handleChange(e)}

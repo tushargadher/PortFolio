@@ -77,10 +77,9 @@ const Portfolio = () => {
   ];
   return (
     <>
-      <div div className="work">
+      <div className="work">
         <div className="head">PORTFOLIO</div>
         <div id="proje">Check out my best work</div>
-        {/* project contaairt */}
         <div className="projectContainer" data-aos="fade-up">
           {projects.map((project) => (
             <ProjectComp

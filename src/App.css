@@ -307,7 +307,6 @@ html {
   justify-content: center;
   transition: transform 0.4s ease-in;
   color: white;
-  background-color: pink;
 }
 
 .Nav ul {
@@ -394,7 +393,6 @@ html {
 .devimg img {
   border-radius: 100%;
   width: 70%;
-  height: 100%;
   filter: drop-shadow(0 0 1rem black);
 
   /* border: 2px solid white; */
@@ -983,6 +981,7 @@ h4 {
 
   .Nav {
     backdrop-filter: none;
+    width: 20vw;
     -webkit-backdrop-filter: none;
     height: 12vh;
   }
@@ -994,7 +993,7 @@ h4 {
   }
 
   .Nav ul .navigation li {
-    font-size: 2.7rem;
+    font-size: 3.5rem;
   }
 
   .devinfo {

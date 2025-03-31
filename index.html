@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public/favicon.png" />
-    <link rel="stylesheet" href="/src/index.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
     <link
@@ -29,27 +28,31 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <!-- plugin for animation -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script type="text/jsx"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.js" defer></script>
     <script>
-      // set the during of animation plugin
-      AOS.init({
-        offset: 170,
-        duration: 1500,
-      });
-
       window.onload = () => {
+        if (typeof AOS !== "undefined") {
+          AOS.init({
+            offset: 170,
+            duration: 1500,
+            once: true,
+          });
+        } else {
+          console.error("AOS is not loaded");
+        }
         document.querySelector(".preloader").style.display = "none";
+        if (typeof kursor !== "undefined") {
+          new kursor({
+            removeDefaultCursor: true,
+            color: "#0065FF",
+            type: 1,
+          });
+        } else {
+          console.error("kursor is not loaded");
+        }
       };
-    </script>
-    <script src="https://unpkg.com/kursor"></script>
-    <script>
-      new kursor({
-        removeDefaultCursor: true,
-        color: "#0065FF",
-        type: 1,
-      });
     </script>
   </body>
 </html>
