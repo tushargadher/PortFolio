@@ -23,7 +23,7 @@ const Portfolio = () => {
       name: "FlipKart Clone ",
       description:
         "A Flipkart clone is created with the MERN stack and Redux. It mimics the features of Flipkart, allowing users to browse products, add them to a cart, and manage orders.",
-      link: "https://flipkartz.netlify.app/",
+      link: "https://flipcartstore.netlify.app/",
     },
     {
       id: 4,
