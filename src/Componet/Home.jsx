@@ -15,11 +15,12 @@ const Home = () => {
           <div className="name">Tushar Gadher</div>
 
           <div className="about">
-               Software Engineer specializing in Vue.js, Nuxt.js, and GraphQL, passionate about building 
-               scalable, high-performance web applications.
+            Software Engineer with 1.5+ years of experience in Vue.js and
+            Nuxt.js, focused on building scalable, high-performance web
+            applications with clean and maintainable code.
           </div>
 
-          <button className="btn" onClick={scrollToSection} >
+          <button className="btn" onClick={scrollToSection}>
             Contact Me
           </button>
         </div>
@@ -28,7 +29,7 @@ const Home = () => {
             src={svg}
             alt="image is not available"
             data-aos="fade-up"
-            className="jumpingSVG"            
+            className="jumpingSVG"
           />
         </div>
       </div>

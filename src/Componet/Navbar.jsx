@@ -17,7 +17,7 @@ function Navbar({ myname }) {
     };
 
     window.addEventListener("scroll", toggleVisible);
-    return () => window.removeEventListener("scroll", toggleVisible); // ✅ Cleanup
+    return () => window.removeEventListener("scroll", toggleVisible);
   }, []);
 
   const scrollToSection = useCallback((elementRef) => {

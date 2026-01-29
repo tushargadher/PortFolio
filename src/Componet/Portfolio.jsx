@@ -5,18 +5,19 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      name: "ChatApplication",
+      name: "ChatBox ",
       description:
-        "ChatApplication is a real-time group chat platform where more than two users can chat",
-      link: "https://richchatapp.netlify.app/",
+        "ChatBox is a real-time chat application project that provides users with a platform to communicate with each other in real-time.",
+      link: "https://mychatrooms.netlify.app/",
     },
     {
       id: 2,
-      name: "BookStore",
+      name: "CloudNotes",
       description:
-        "BookStore is an online platform where users can buy books. This project was developed during the TatvaSoft Summer Intership.",
-      link: "https://bookhstore.netlify.app/",
+        "CloudNotes is a web-based application designed to help users store and manage their notes online on a cloud database.",
+      link: "https://cloudnotees.netlify.app/",
     },
+
     {
       id: 3,
       name: "FlipKart Clone ",
@@ -26,17 +27,17 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      name: "ChatBox ",
+      name: "ChatApplication",
       description:
-        "ChatBox is a real-time chat application project that provides users with a platform to communicate with each other in real-time.",
-      link: "https://mychatrooms.netlify.app/",
+        "ChatApplication is a real-time group chat platform where more than two users can chat",
+      link: "https://richchatapp.netlify.app/",
     },
     {
       id: 5,
-      name: "CloudNotes",
+      name: "BookStore",
       description:
-        "CloudNotes is a web-based application designed to help users store and manage their notes online on a cloud database.",
-      link: "https://cloudnotees.netlify.app/",
+        "BookStore is an online platform where users can buy books. This project was developed during the TatvaSoft Summer Intership.",
+      link: "https://bookhstore.netlify.app/",
     },
     {
       id: 6,

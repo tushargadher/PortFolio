@@ -1,7 +1,5 @@
 import React from "react";
 
-// Import profile image
-import profileImg from "../Media/Profile.webp";
 
 // Import skill images
 import htmlImg from "../SkillsImg/html.png";
@@ -21,6 +19,7 @@ import npmImg from "../SkillsImg/npm.png";
 import netlifyImg from "../SkillsImg/netlify.png";
 import postmanImg from "../SkillsImg/postman.png";
 import materialUiImg from "../SkillsImg/matrialUi.png";
+import angularIMG from "../SkillsImg/angular.png";
 
 function About() {
   return (
@@ -31,18 +30,29 @@ function About() {
           <h4>ABOUT</h4>
           <h1 className="introHead">KNOW MORE ABOUT ME</h1>
           <div className="mydetail">
-            <img src={profileImg} alt="Profile not available" loading="lazy" />
             <div className="detail">
               <h1 style={{ color: "#0065FF" }}>
-                Software Engineer | Full Stack Developer
+                Software Engineer | Frontend-Focused Full Stack Developer
               </h1>
               <p id="p">
-                Hello! I'm Tushar Gadher, a results-driven Software Engineer specializing in Vue.js, Nuxt.js, JavaScript, and GraphQL.
-                I have experience developing scalable, high-performance web applications and optimizing frontend architecture.
-                At Cybercom Creation, I worked on the 1StopBedrooms project, enhancing UI performance and integrating efficient
-                GraphQL-based data fetching. My expertise spans front-end and back-end technologies, including React.js,
-                Node.js, Express.js, MySQL, and MongoDB. With a strong foundation in web development and a degree in Information Technology,
-                I'm eager to take on new challenges and contribute to innovative projects. Let's collaborate to build seamless, efficient, and
+                A Software Engineer with hands-on experience in building
+                scalable and high-performance web applications using Vue.js,
+                Nuxt.js, JavaScript, and GraphQL.
+                <br />
+                <br />
+                Currently working at Cybercom Creation, contributing to
+                production-level projects like 1StopBedrooms with a focus on UI
+                performance optimization, reusable component development, and
+                efficient GraphQL-based data integration.
+                <br />
+                <br />
+                Experienced in full stack development with React.js, Node.js,
+                Express.js, MySQL, and MongoDB, enabling a strong understanding
+                of end-to-end application workflows.
+                <br />
+                <br />
+                Passionate about writing clean, maintainable code and
+                continuously improving skills while building reliable and
                 user-friendly web applications.
               </p>
             </div>
@@ -63,6 +73,9 @@ function About() {
           <div className="skill" data-aos="zoom-in-up" data-title="ReactJs">
             <img src={reactImg} alt="React" loading="lazy" />
           </div>
+          <div className="skill" data-aos="zoom-in-up" data-title="Angular">
+            <img src={angularIMG} alt="Angular" loading="lazy" />
+          </div>
           <div className="skill" data-aos="zoom-in-up" data-title="VueJS">
             <img src={vueImg} alt="VueJS" loading="lazy" />
           </div>
@@ -78,7 +91,11 @@ function About() {
           <div className="skill" data-aos="zoom-in-up" data-title="Bootstrap">
             <img src={bootstrapImg} alt="Bootstrap" loading="lazy" />
           </div>
-          <div className="skill" data-aos="zoom-in-up" data-title="Tailwind CSS">
+          <div
+            className="skill"
+            data-aos="zoom-in-up"
+            data-title="Tailwind CSS"
+          >
             <img src={tailwindImg} alt="Tailwind CSS" loading="lazy" />
           </div>
           <div className="skill" data-aos="zoom-in-up" data-title="JQuery">
