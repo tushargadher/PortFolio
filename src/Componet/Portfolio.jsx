@@ -44,7 +44,7 @@ const Portfolio = () => {
       name: "InMovies",
       description:
         "InMovies is an innovative project that serves as a comprehensive movie and series review and search platform.",
-      link: "https://tushargadher.github.io/inMovies/",
+      link: "https://inmovies4u.netlify.app/",
     },
     {
       id: 7,
