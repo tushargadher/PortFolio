@@ -2,57 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tushar Gadher </title>
+    <title>Tushar Gadher - Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="preloader">
-      <span class="innerBox">
-        <span>Loading Content...</span>
-        <section class="dots-container">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </section>
-      </span>
-    </div>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script type="text/jsx"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.js" defer></script>
-    <script>
-      window.onload = () => {
-        if (typeof AOS !== "undefined") {
-          AOS.init({
-            offset: 170,
-            duration: 1500,
-            once: true,
-          });
-        } else {
-          console.error("AOS is not loaded");
-        }
-        document.querySelector(".preloader").style.display = "none";
-        if (typeof kursor !== "undefined") {
-          new kursor({
-            removeDefaultCursor: true,
-            color: "#0065FF",
-            type: 1,
-          });
-        } else {
-          console.error("kursor is not loaded");
-        }
-      };
-    </script>
   </body>
 </html>
