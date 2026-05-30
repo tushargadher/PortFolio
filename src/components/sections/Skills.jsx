@@ -35,30 +35,30 @@ const skillCategories = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24 relative bg-black/50">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="py-32 relative bg-surface border-t border-border">
+      <div className="container mx-auto px-6 max-w-5xl">
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Technical <span className="text-gradient">Proficiency</span></h2>
-          <p className="text-gray-400">Crafting robust solutions with a diverse tech stack.</p>
+          <h2 className="text-sm font-medium tracking-wide uppercase text-secondary mb-2">Capabilities</h2>
+          <h3 className="text-3xl font-bold text-primary">Technical Proficiency</h3>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skillCategories.map((category, catIdx) => (
             <motion.div 
               key={catIdx}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: catIdx * 0.2, duration: 0.5 }}
-              className="glass-card rounded-3xl p-8"
+              transition={{ delay: catIdx * 0.1, duration: 0.5 }}
+              className="premium-card rounded-2xl p-8"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6 border-b border-white/10 pb-4">
+              <h3 className="text-xl font-bold text-primary mb-6 border-b border-border pb-4">
                 {category.title}
               </h3>
               
@@ -66,16 +66,16 @@ export function Skills() {
                 {category.skills.map((skill, idx) => (
                   <div key={idx}>
                     <div className="flex justify-between mb-2">
-                      <span className="text-gray-300 font-medium">{skill.name}</span>
-                      <span className="text-primary text-sm">{skill.level}%</span>
+                      <span className="text-secondary font-medium text-sm">{skill.name}</span>
+                      <span className="text-primary text-sm font-semibold">{skill.level}%</span>
                     </div>
-                    <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                    <div className="h-1.5 w-full bg-background rounded-full overflow-hidden">
                       <motion.div 
-                        className="h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+                        className="h-full bg-secondary rounded-full"
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
                         viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.3 }}
+                        transition={{ duration: 1, delay: 0.2 }}
                       ></motion.div>
                     </div>
                   </div>

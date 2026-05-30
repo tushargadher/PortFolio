@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Mail } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '../ui/Button';
 
 export function Navbar() {
@@ -20,7 +20,6 @@ export function Navbar() {
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Achievements', href: '#achievements' },
   ];
 
   return (
@@ -30,12 +29,12 @@ export function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'py-4 glass' : 'py-6 bg-transparent'
+          isScrolled ? 'py-4 bg-background/90 backdrop-blur-md border-b border-border' : 'py-6 bg-transparent'
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
-          <a href="#" className="text-2xl font-bold text-white uppercase tracking-wider">
-            Tushar<span className="text-primary">.</span>
+          <a href="#" className="text-xl font-bold text-primary tracking-tight">
+            Tushar<span className="text-secondary">.</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -45,7 +44,7 @@ export function Navbar() {
                 <li key={link.name}>
                   <a 
                     href={link.href} 
-                    className="text-gray-300 hover:text-primary transition-colors text-sm font-medium"
+                    className="text-secondary hover:text-primary transition-colors text-sm font-medium"
                   >
                     {link.name}
                   </a>
@@ -59,7 +58,7 @@ export function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="md:hidden text-white"
+            className="md:hidden text-primary"
             onClick={() => setIsMobileMenuOpen(true)}
           >
             <Menu className="w-6 h-6" />
@@ -75,10 +74,10 @@ export function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[60] bg-background/95 backdrop-blur-xl flex flex-col justify-center items-center"
+            className="fixed inset-0 z-[60] bg-background flex flex-col justify-center items-center"
           >
             <button 
-              className="absolute top-6 right-6 text-white"
+              className="absolute top-6 right-6 text-primary"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <X className="w-8 h-8" />
@@ -89,7 +88,7 @@ export function Navbar() {
                   <a 
                     href={link.href} 
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-3xl font-bold text-white hover:text-primary transition-colors"
+                    className="text-3xl font-bold text-primary hover:text-secondary transition-colors"
                   >
                     {link.name}
                   </a>

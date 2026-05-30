@@ -20,91 +20,88 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
-      {/* Decorative blurred background */}
-      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-[100px]"></div>
-
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="contact" className="py-32 relative bg-surface border-t border-border">
+      <div className="container mx-auto px-6 max-w-5xl relative z-10">
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Get In <span className="text-gradient">Touch</span></h2>
-          <p className="text-gray-400">Have a project in mind or want to collaborate? Let's talk.</p>
+          <h2 className="text-sm font-medium tracking-wide uppercase text-secondary mb-2">Connect</h2>
+          <h3 className="text-3xl font-bold text-primary">Get In Touch</h3>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 text-white">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 text-primary">
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col justify-center"
+            className="flex flex-col"
           >
-            <h3 className="text-3xl font-bold mb-6">Let's build something <span className="text-gradient">amazing</span></h3>
-            <p className="text-gray-400 mb-8 leading-relaxed">
+            <h4 className="text-2xl font-bold mb-6">Let's build something.</h4>
+            <p className="text-secondary mb-10 leading-relaxed font-light">
               I am currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
             </p>
             
-            <div className="space-y-4 mb-8">
-              <a href="mailto:hello@example.com" className="flex items-center gap-4 text-gray-300 hover:text-primary transition-colors glass-card p-4 rounded-xl w-max">
-                <Mail className="w-6 h-6" />
-                <span className="font-medium">contact@tushargadher.com</span>
+            <div className="space-y-4 mb-10">
+              <a href="mailto:contact@tushargadher.com" className="flex items-center gap-4 text-secondary hover:text-primary transition-colors border border-border p-4 rounded-xl w-max hover:bg-background">
+                <Mail className="w-5 h-5" />
+                <span className="font-medium text-sm">contact@tushargadher.com</span>
               </a>
             </div>
 
             <div className="flex gap-4">
-              <a href="#" className="w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors">
-                <FaGithub className="w-5 h-5" />
+              <a href="#" className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-background hover:text-primary text-secondary transition-colors">
+                <FaGithub className="w-4 h-4" />
               </a>
-              <a href="#" className="w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-secondary/20 hover:text-secondary transition-colors">
-                <FaLinkedin className="w-5 h-5" />
+              <a href="#" className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-background hover:text-primary text-secondary transition-colors">
+                <FaLinkedin className="w-4 h-4" />
               </a>
-              <a href="#" className="w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors">
-                <FaTwitter className="w-5 h-5" />
+              <a href="#" className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-background hover:text-primary text-secondary transition-colors">
+                <FaTwitter className="w-4 h-4" />
               </a>
             </div>
           </motion.div>
 
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <form onSubmit={handleSubmit} className="glass-card rounded-3xl p-8 flex flex-col gap-6">
+            <form onSubmit={handleSubmit} className="premium-card rounded-2xl p-8 lg:p-10 flex flex-col gap-6">
               <div className="flex flex-col gap-2">
-                <label htmlFor="name" className="text-sm font-medium text-gray-400">Name</label>
+                <label htmlFor="name" className="text-sm font-medium text-secondary">Name</label>
                 <input 
                   type="text" 
                   id="name" 
                   required
-                  className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
+                  className="bg-background border border-border rounded-xl px-4 py-3 text-primary focus:outline-none focus:border-secondary transition-colors text-sm"
                   placeholder="John Doe"
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-sm font-medium text-gray-400">Email</label>
+                <label htmlFor="email" className="text-sm font-medium text-secondary">Email</label>
                 <input 
                   type="email" 
                   id="email" 
                   required
-                  className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
+                  className="bg-background border border-border rounded-xl px-4 py-3 text-primary focus:outline-none focus:border-secondary transition-colors text-sm"
                   placeholder="john@example.com"
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <label htmlFor="message" className="text-sm font-medium text-gray-400">Message</label>
+                <label htmlFor="message" className="text-sm font-medium text-secondary">Message</label>
                 <textarea 
                   id="message" 
                   rows="4"
                   required
-                  className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors resize-none"
+                  className="bg-background border border-border rounded-xl px-4 py-3 text-primary focus:outline-none focus:border-secondary transition-colors resize-none text-sm"
                   placeholder="How can I help you?"
                 ></textarea>
               </div>
               
-              <Button type="submit" className="w-full mt-2" disabled={isSubmitting || submitted}>
+              <Button type="submit" className="w-full mt-4" disabled={isSubmitting || submitted}>
                 <AnimatePresence mode="wait">
                   {isSubmitting ? (
                     <motion.div key="submitting" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -116,7 +113,7 @@ export function Contact() {
                     </motion.div>
                   ) : (
                     <motion.div key="send" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-2">
-                      <Send className="w-5 h-5" /> Send Message
+                      <Send className="w-4 h-4" /> Send Message
                     </motion.div>
                   )}
                 </AnimatePresence>

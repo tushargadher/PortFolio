@@ -1,79 +1,70 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Zap, Layout } from 'lucide-react';
 
 export function About() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
       opacity: 1,
-      transition: { staggerChildren: 0.2 }
+      transition: { staggerChildren: 0.1 }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 10 },
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.5 }
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 
-  const highlights = [
-    {
-      icon: <Zap className="w-6 h-6 text-primary" />,
-      title: "Performance Focus",
-      desc: "Improved UI performance and reduced load times in production apps."
-    },
-    {
-      icon: <Layout className="w-6 h-6 text-secondary" />,
-      title: "Scalable Architecture",
-      desc: "Built scalable frontend apps using Vue.js, Nuxt.js, and React.js."
-    },
-    {
-      icon: <Code2 className="w-6 h-6 text-green-400" />,
-      title: "Web Scraping",
-      desc: "Scraped 50+ websites using Python (BeautifulSoup, Scrapy)."
-    }
-  ];
-
   return (
-    <section id="about" className="py-24 relative">
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-32 relative bg-background border-t border-border">
+      <div className="container mx-auto px-6 max-w-5xl">
         <motion.div 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="max-w-4xl mx-auto"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-5xl font-bold mb-8 text-center">
-            About <span className="text-gradient">Me</span>
-          </motion.h2>
-
-          <motion.div variants={itemVariants} className="glass-card rounded-3xl p-8 md:p-12 mb-12">
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
-              I am a results-driven <strong className="text-white font-medium">Software Engineer</strong> specializing in Frontend Development. 
-              With expertise in modern frameworks like <span className="text-primary font-medium">Vue.js, Nuxt.js, and React.js</span>, 
-              I am passionate about building scalable, high-performance applications with a strong focus on UI/UX and optimized communication via GraphQL.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {highlights.map((item, idx) => (
-              <motion.div 
-                key={idx}
-                variants={itemVariants}
-                className="glass-card rounded-2xl p-6 group hover:-translate-y-2"
-              >
-                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-gray-400 text-sm">{item.desc}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+            <motion.div variants={itemVariants} className="lg:col-span-4">
+              <h2 className="text-sm font-medium tracking-wide uppercase text-secondary mb-2">
+                About
+              </h2>
+              <h3 className="text-3xl font-bold text-primary">
+                Engineering <br /> Mindset
+              </h3>
+            </motion.div>
+            
+            <div className="lg:col-span-8 space-y-10 text-lg text-secondary font-light leading-relaxed">
+              <motion.div variants={itemVariants}>
+                <p>
+                  I am a results-driven <strong className="text-primary font-medium">Frontend Engineer</strong> who cares deeply about the intersection of design and engineering. My focus is on building scalable, high-performance web applications that feel fast and look beautiful.
+                </p>
               </motion.div>
-            ))}
+              
+              <motion.div variants={itemVariants}>
+                <p>
+                  With expertise in <span className="text-primary font-medium">React, Vue.js, and Nuxt.js</span>, I specialize in crafting robust UI systems, optimizing frontend architecture, and ensuring seamless communication with backend services via GraphQL and REST.
+                </p>
+              </motion.div>
+
+              <motion.div variants={itemVariants} className="pt-6 border-t border-border">
+                <h4 className="text-primary font-medium mb-4 text-base">Core Principles</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <h5 className="text-primary font-medium text-sm mb-1">Performance First</h5>
+                    <p className="text-sm text-secondary">Optimizing rendering pipelines, minimizing bundle sizes, and ensuring buttery-smooth interactions.</p>
+                  </div>
+                  <div>
+                    <h5 className="text-primary font-medium text-sm mb-1">Scalable Systems</h5>
+                    <p className="text-sm text-secondary">Building component libraries and architectural foundations that scale with the product.</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </motion.div>
       </div>

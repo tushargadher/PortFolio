@@ -7,32 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#0a0a0a',
-        primary: '#0ea5e9',   // Cyan
-        secondary: '#8b5cf6', // Violet
+        background: '#09090b', // zinc-950
+        surface: '#18181b', // zinc-900
+        primary: '#fafafa', // zinc-50
+        secondary: '#a1a1aa', // zinc-400
+        border: '#27272a', // zinc-800
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
-      animation: {
-        'blob': 'blob 7s infinite',
-      },
-      keyframes: {
-        blob: {
-          '0%': {
-            transform: 'translate(0px, 0px) scale(1)',
-          },
-          '33%': {
-            transform: 'translate(30px, -50px) scale(1.1)',
-          },
-          '66%': {
-            transform: 'translate(-20px, 20px) scale(0.9)',
-          },
-          '100%': {
-            transform: 'translate(0px, 0px) scale(1)',
-          },
-        }
-      }
     },
   },
   plugins: [],
