@@ -55,7 +55,7 @@ export function About() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <h5 className="text-accent-blue font-semibold text-sm mb-1">Performance First</h5>
-                    <p className="text-sm text-secondary">Optimizing rendering pipelines, minimizing bundle sizes, and ensuring buttery-smooth interactions.</p>
+                    <p className="text-sm text-secondary">Optimizing rendering , minimizing bundle sizes, and ensuring buttery-smooth interactions.</p>
                   </div>
                   <div>
                     <h5 className="text-accent-purple font-semibold text-sm mb-1">Scalable Systems</h5>

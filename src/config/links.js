@@ -1,11 +1,11 @@
 export const LINKS = {
   github: "https://github.com/tushargadher",
-  linkedin: "https://linkedin.com/in/tushargadher",
+  linkedin: "https://www.linkedin.com/in/tushar-gadher-211bb2175/",
   twitter: "https://twitter.com/tushargadher",
-  email: "mailto:contact@tushargadher.com",
-  resume: "/resume.pdf",
+  email: "mailto:tushargadher123@gmail.com",
+  resume: "https://drive.google.com/file/d/1cvTxEbQT2xqGqf7SbZwgIVSdy4unFkZM/view",
 
-  chatApp: "https://example.com/chat",
-  flipkartClone: "https://example.com/flipkart",
-  bookstore: "https://example.com/bookstore"
+  chatApp: "https://mychatrooms.netlify.app/",
+  flipkartClone: "https://flipcartstore.netlify.app/",
+  bookstore: "https://bookhstore.netlify.app/"
 };

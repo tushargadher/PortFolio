@@ -13,10 +13,10 @@ const stats = [
   {
     icon: <SearchCode className="w-6 h-6 text-accent-purple" />,
     iconBg: "bg-accent-purple/10 border-accent-purple/20",
-    value: "50+",
+    value: "150+",
     valueColor: "text-accent-purple",
     label: "Websites Scraped",
-    desc: "Automated large scale data extraction pipelines using Python."
+    desc: "Successfully scraped 150+ websites using Python (BeautifulSoup, Scrap) extracting data such as categories, subcategories, and product information."
   },
   {
     icon: <MonitorSmartphone className="w-6 h-6 text-accent-blue" />,

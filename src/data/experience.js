@@ -9,7 +9,7 @@ export const experiences = [
       "Built scalable frontend architectures using Vue.js & Nuxt.js for enterprise applications.",
       "Improved UI rendering performance and significantly reduced bundle sizes and load times.",
       "Implemented declarative data fetching with GraphQL for optimized API communication.",
-      "Engineered automated data extraction pipelines using Python (BeautifulSoup, Scrapy) across 50+ sources."
+      "Engineered automated data extraction using Python (BeautifulSoup, Scrapy) across 150+ sources."
     ]
   },
   {
