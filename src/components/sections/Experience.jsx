@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const experiences = [
@@ -35,7 +34,7 @@ export function Experience() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-sm font-medium tracking-wide uppercase text-secondary mb-2">Career</h2>
+          <h2 className="text-sm font-semibold tracking-widest uppercase text-accent-purple mb-2">Career</h2>
           <h3 className="text-3xl font-bold text-primary">Experience</h3>
         </motion.div>
 
@@ -47,22 +46,22 @@ export function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-4 group"
+              className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-4 group cursor-default"
             >
               <div className="md:col-span-3">
-                <span className="text-secondary text-sm font-medium">{exp.period}</span>
+                <span className="text-accent-purple text-sm font-semibold tracking-wide">{exp.period}</span>
               </div>
               
               <div className="md:col-span-9">
                 <div className="mb-4">
-                  <h4 className="text-xl font-bold text-primary group-hover:text-white transition-colors">{exp.role}</h4>
+                  <h4 className="text-xl font-bold text-primary group-hover:text-accent-blue transition-colors duration-300">{exp.role}</h4>
                   <h5 className="text-secondary font-medium">{exp.company}</h5>
                 </div>
                 
                 <ul className="space-y-3">
                   {exp.points.map((point, pIdx) => (
                     <li key={pIdx} className="flex gap-4 text-secondary font-light leading-relaxed">
-                      <span className="text-border mt-2.5 w-1 h-1 rounded-full bg-border flex-shrink-0 group-hover:bg-secondary transition-colors"></span>
+                      <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-border flex-shrink-0 group-hover:bg-accent-purple transition-colors duration-300"></span>
                       <span>{point}</span>
                     </li>
                   ))}

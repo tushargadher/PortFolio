@@ -1,9 +1,9 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const skillCategories = [
   {
     title: "Frontend",
+    gradient: "from-accent-teal to-accent-blue",
     skills: [
       { name: "Vue.js", level: 95 },
       { name: "Nuxt.js", level: 90 },
@@ -14,6 +14,7 @@ const skillCategories = [
   },
   {
     title: "Backend & Database",
+    gradient: "from-accent-blue to-accent-purple",
     skills: [
       { name: "Node.js", level: 80 },
       { name: "Express.js", level: 80 },
@@ -24,6 +25,7 @@ const skillCategories = [
   },
   {
     title: "Tools & Others",
+    gradient: "from-accent-purple to-accent-teal",
     skills: [
       { name: "Python (Scraping)", level: 85 },
       { name: "Git & GitHub", level: 90 },
@@ -40,11 +42,11 @@ export function Skills() {
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <h2 className="text-sm font-medium tracking-wide uppercase text-secondary mb-2">Capabilities</h2>
+          <h2 className="text-sm font-semibold tracking-widest uppercase text-accent-teal mb-2">Capabilities</h2>
           <h3 className="text-3xl font-bold text-primary">Technical Proficiency</h3>
         </motion.div>
 
@@ -54,8 +56,8 @@ export function Skills() {
               key={catIdx}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: catIdx * 0.1, duration: 0.5 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ delay: catIdx * 0.05, duration: 0.5 }}
               className="premium-card rounded-2xl p-8"
             >
               <h3 className="text-xl font-bold text-primary mb-6 border-b border-border pb-4">
@@ -71,11 +73,12 @@ export function Skills() {
                     </div>
                     <div className="h-1.5 w-full bg-background rounded-full overflow-hidden">
                       <motion.div 
-                        className="h-full bg-secondary rounded-full"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.2 }}
+                        className={`h-full bg-gradient-to-r ${category.gradient} rounded-full`}
+                        style={{ width: `${skill.level}%`, originX: 0 }}
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        viewport={{ once: true, amount: 0.1 }}
+                        transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
                       ></motion.div>
                     </div>
                   </div>

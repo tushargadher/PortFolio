@@ -1,4 +1,4 @@
-import React from 'react';
+import { LINKS } from '../../config/links';
 
 export function Footer() {
   return (
@@ -8,13 +8,28 @@ export function Footer() {
           © {new Date().getFullYear()} Tushar Gadher. All rights reserved.
         </p>
         <div className="flex gap-6">
-          <a href="#" className="text-secondary hover:text-primary transition-colors text-sm font-medium">
+          <a 
+            href={LINKS.github} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-secondary hover:text-accent-blue transition-colors text-sm font-medium focus-visible:ring-2 focus-visible:ring-accent-blue focus-visible:outline-none rounded px-1"
+          >
             GitHub
           </a>
-          <a href="#" className="text-secondary hover:text-primary transition-colors text-sm font-medium">
+          <a 
+            href={LINKS.linkedin} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-secondary hover:text-accent-purple transition-colors text-sm font-medium focus-visible:ring-2 focus-visible:ring-accent-blue focus-visible:outline-none rounded px-1"
+          >
             LinkedIn
           </a>
-          <a href="#" className="text-secondary hover:text-primary transition-colors text-sm font-medium">
+          <a 
+            href={LINKS.twitter} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-secondary hover:text-accent-teal transition-colors text-sm font-medium focus-visible:ring-2 focus-visible:ring-accent-blue focus-visible:outline-none rounded px-1"
+          >
             Twitter
           </a>
         </div>

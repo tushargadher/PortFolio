@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Code, CheckCircle } from 'lucide-react';
 import { Badge } from '../ui/Badge';
@@ -7,19 +6,25 @@ const certifications = [
   {
     title: "JavaScript Algorithms",
     issuer: "freeCodeCamp",
-    icon: <Code className="w-5 h-5 text-primary" />,
+    icon: <Code className="w-5 h-5 text-accent-blue" />,
+    iconBg: "bg-accent-blue/10 border-accent-blue/20",
+    badgeVariant: "blue",
     date: "2023"
   },
   {
     title: "React Certificate",
     issuer: "HackerRank",
-    icon: <CheckCircle className="w-5 h-5 text-primary" />,
+    icon: <CheckCircle className="w-5 h-5 text-accent-purple" />,
+    iconBg: "bg-accent-purple/10 border-accent-purple/20",
+    badgeVariant: "purple",
     date: "2023"
   },
   {
     title: "Web Dev Internship",
     issuer: "IBM",
-    icon: <Award className="w-5 h-5 text-primary" />,
+    icon: <Award className="w-5 h-5 text-accent-teal" />,
+    iconBg: "bg-accent-teal/10 border-accent-teal/20",
+    badgeVariant: "teal",
     date: "2024"
   }
 ];
@@ -34,7 +39,7 @@ export function Certifications() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-sm font-medium tracking-wide uppercase text-secondary mb-2">Validation</h2>
+          <h2 className="text-sm font-semibold tracking-widest uppercase text-accent-purple mb-2">Validation</h2>
           <h3 className="text-3xl font-bold text-primary">Licenses & Certifications</h3>
         </motion.div>
 
@@ -46,13 +51,14 @@ export function Certifications() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.5 }}
-              className="premium-card rounded-2xl p-6"
+              whileHover={{ y: -4 }}
+              className="premium-card rounded-2xl p-6 cursor-default"
             >
               <div className="flex items-center justify-between mb-8">
-                <div className="w-10 h-10 rounded-lg bg-background border border-border flex items-center justify-center">
+                <div className={`w-10 h-10 rounded-lg border flex items-center justify-center transition-colors duration-300 ${cert.iconBg}`}>
                   {cert.icon}
                 </div>
-                <Badge variant="outline" className="!bg-background !text-secondary !border-border">{cert.date}</Badge>
+                <Badge variant={cert.badgeVariant}>{cert.date}</Badge>
               </div>
               <h3 className="text-lg font-bold text-primary mb-1">{cert.title}</h3>
               <p className="text-secondary text-sm font-medium">{cert.issuer}</p>
